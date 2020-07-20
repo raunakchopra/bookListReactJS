@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import Heading from "./components/Heading";
+import Input from "./components/Input";
 function App() {
   const { register, handleSubmit } = useForm();
 
@@ -30,15 +31,7 @@ function App() {
       <Heading />
       <form onSubmit={handleSubmit(onSubmit)}>
         {InputLabels.map((InpLab) => (
-          <div className="form-group">
-            <label for={InpLab.labelName}>{InpLab.labelName}</label>
-            <input
-              type="text"
-              name={InpLab.labelName}
-              className="form-control"
-              ref={register}
-            />
-          </div>
+          <Input ref={register} name={InpLab.labelName} />
         ))}
         <input
           type="submit"
