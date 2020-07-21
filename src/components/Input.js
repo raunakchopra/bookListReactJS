@@ -8,7 +8,7 @@ const Input = (props) => {
         type="text"
         name={props.name}
         className="form-control"
-        ref={props.register}
+        ref={props.Ref}
       />
     </div>
   );

@@ -31,7 +31,7 @@ function App() {
       <Heading />
       <form onSubmit={handleSubmit(onSubmit)}>
         {InputLabels.map((InpLab) => (
-          <Input ref={register} name={InpLab.labelName} />
+          <Input Ref={register} name={InpLab.labelName} />
         ))}
         <input
           type="submit"
